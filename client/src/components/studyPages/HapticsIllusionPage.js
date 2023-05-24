@@ -22,7 +22,7 @@ function HapticsIllusionPage() {
                 </p>
             </div>
             <div style={{ textAlign: 'center', marginTop: '30px' }}>
-                <Button variant="outlined" onClick={handleProceed} style={{marginRight: '50px'}}>
+                <Button variant="contained" onClick={handleProceed} style={{marginRight: '50px'}}>
                     proceed
                 </Button>
                 <Button variant="outlined" onClick={handleReturn}>

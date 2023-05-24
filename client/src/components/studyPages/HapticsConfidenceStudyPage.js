@@ -21,26 +21,26 @@ function HapticsConfidenceStudyPage() {
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const nextTrialNumber = parseInt(trialNumber) + 1;
     const signal_ids = {
-        1: '15111',
-        2: '25111',
-        3: '35111',
+        1: '531#1',
+        2: '25152',
+        3: '34103',
         4: '45011',
-        5: '55011',
-        6: '15112',
-        7: '25112',
-        8: '35112',
+        5: '54011',
+        6: '15140',
+        7: '25194',
+        8: '34163',
         9: '45012',
         10: '55012',
-        11: '15113',
-        12: '25113',
-        13: '35113',
+        11: '53133',
+        12: '44113',
+        13: '35133',
         14: '45013',
-        15: '55013',
-        16: '15114',
-        17: '25114',
-        18: '35114',
+        15: '54173',
+        16: '23104',
+        17: '25112',
+        18: '33182',
         19: '45014',
-        20: '55014',
+        20: '531#2',
     };
 
     const getButtonName = (signal_id) => {
@@ -148,7 +148,7 @@ function HapticsConfidenceStudyPage() {
                     min={0}
                     max={100} />
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '80px' }}>
-                    <Button variant="outlined" onClick={playOnClick} style={{ marginRight: '50px' }}>
+                    <Button variant="contained" onClick={playOnClick} style={{ marginRight: '50px' }}>
                         play
                     </Button>
                     <Button variant="outlined" onClick={submitOnClick} disabled={!ifClicked}>

@@ -14,6 +14,7 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use('/api/study1', require('./routes/api/study1'));
 app.use('/api/study2', require('./routes/api/study2'));
 app.use('/api/study3', require('./routes/api/study3'));
+app.use('/api/study4', require('./routes/api/study4'));
 
 const port = process.env.PORT || 5001;
 

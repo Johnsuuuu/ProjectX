@@ -39,27 +39,35 @@ function AffectionComputingStudyPage() {
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const parentDivRef = useRef(null);
     const signal_ids = {
-        1: '11111',
-        2: '21111',
-        3: '31111',
-        4: '41011',
-        5: '51011',
-        6: '11112',
-        7: '21112',
-        8: '31112',
-        9: '41012',
-        10: '51012',
-        11: '11113',
-        12: '21113',
-        13: '31113',
-        14: '41013',
-        15: '51013',
-        16: '11114',
-        17: '21114',
-        18: '31114',
-        19: '41014',
-        20: '51014',
+        1: '531#1',
+        2: '25152',
+        3: '34103',
+        4: '45011',
+        5: '54011',
+        6: '15140',
+        7: '25194',
+        8: '34163',
+        9: '45012',
+        10: '55012',
+        11: '53133',
+        12: '44113',
+        13: '35133',
+        14: '45013',
+        15: '54173',
+        16: '23104',
+        17: '25112',
+        18: '33182',
+        19: '45014',
+        20: '531#2',
     };
+
+    const getButtonName = (signal_id) => {
+        const first_digit = parseInt(signal_id.charAt(0));
+        const second_digit = parseInt(signal_id.charAt(1));
+        const button_number = (first_digit - 1) * 5 + second_digit;
+
+        return `button${button_number}`;
+    }
 
     const handleClick = (event) => {
         if (ifMouseOver === true) {
@@ -213,6 +221,16 @@ function AffectionComputingStudyPage() {
                 setSnackbarOpen(true);
             });
     }
+
+    const playOnClick = () => {
+        const buttonName = getButtonName(signal_ids[trialNumber]);
+        const lastThreeDigits = signal_ids[trialNumber].substr(-3);
+        axios.post('http://192.168.86.246:4090/' + buttonName, lastThreeDigits).then(response => {
+            console.log(response.data);
+        }).catch(err => {
+            console.error(err);
+        });
+    };
 
 
     return (
@@ -489,6 +507,9 @@ function AffectionComputingStudyPage() {
 
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+                <Button variant="contained" onClick={playOnClick} style={{ marginRight: '50px' }}>
+                    play
+                </Button>
                 <Button variant="outlined" onClick={submitOnClick} disabled={!ifClicked}>
                     submit
                 </Button>
