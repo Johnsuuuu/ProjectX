@@ -11,35 +11,17 @@ const Study3Schema = new Schema({
         type: Number,
         required: true,
     },
-    signal_id: {
+    signal1_id: {
         type: String,
         required: true,
     },
-    choice_id: {
+    signal2_id: {
         type: String,
         required: true,
     },
-    choice_signal: {
+    choice: {
         type: String,
         required: true,
-    },
-    choices: {
-        choice_1: {
-            type: String,
-            required: true,
-        },
-        choice_2: {
-            type: String,
-            required: true,
-        },
-        choice_3: {
-            type: String,
-            required: true,
-        },
-        choice_4: {
-            type: String,
-            required: true,
-        },
     },
 });
 

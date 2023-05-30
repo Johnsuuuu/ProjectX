@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import MemoryIcon from '@mui/icons-material/Memory';
+import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined';
 import WatchIcon from '@mui/icons-material/Watch';
 
 const NavDrawer = () => {
@@ -32,20 +32,20 @@ const NavDrawer = () => {
           </ListItemIcon>
           <ListItemText primary="Affection Computing" sx={{ marginBottom: '10px', marginTop: '10px' }} />
         </ListItem>
-        <ListItem button key="hapticsconfidence" component={Link} to="/hapticsconfidence">
+        <ListItem button key="hapticsrealism" component={Link} to="/hapticsrealism">
           <ListItemIcon>
             {<ThumbUpOffAltIcon />}
           </ListItemIcon>
-          <ListItemText primary="Haptics Confidence" sx={{ marginBottom: '10px', marginTop: '10px' }} />
+          <ListItemText primary="Haptics Realism" sx={{ marginBottom: '10px', marginTop: '10px' }} />
         </ListItem>
-        <ListItem button key="hapticsillusion" component={Link} to="/hapticsillusion">
+        <ListItem button key="hapticsintensity" component={Link} to="/hapticsintensity">
           <ListItemIcon>
-            {<MemoryIcon />}
+            {<TouchAppOutlinedIcon />}
           </ListItemIcon>
-          <ListItemText primary="Haptics Illusion" sx={{ marginBottom: '10px', marginTop: '10px' }} />
+          <ListItemText primary="Haptics Intensity" sx={{ marginBottom: '10px', marginTop: '10px' }} />
         </ListItem>
         <ListItem button key="responsetime" component={Link} to="/responsetime">
-        <ListItemIcon>
+          <ListItemIcon>
             {<WatchIcon />}
           </ListItemIcon>
           <ListItemText primary="Haptics Response Time" sx={{ marginBottom: '10px', marginTop: '10px' }} />

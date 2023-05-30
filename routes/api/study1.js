@@ -12,7 +12,9 @@ router.post('/submit', (req, res) => {
     study: req.body.study,
     trial_number: req.body.trial_number,
     signal_id: req.body.signal_id,
-    coord: req.body.coord,
+    valence: req.body.valence,
+    arousal: req.body.arousal,
+    dominance: req.body.dominance,
   });
 
   newStudy1.save().then(study1 => res.json(study1));

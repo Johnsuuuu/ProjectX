@@ -11,9 +11,9 @@ router.post('/submit', (req, res) => {
   const newStudy2 = new Study2({
     study: req.body.study,
     trial_number: req.body.trial_number,
-    signal_id: req.body.signal_id,
+    signal1_id: req.body.signal1_id,
+    signal2_id: req.body.signal2_id,
     choice: req.body.choice,
-    confidence: req.body.confidence,
   });
 
   newStudy2.save().then(study2 => res.json(study2));

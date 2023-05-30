@@ -15,15 +15,17 @@ const Study1Schema = new Schema({
     type: String,
     required: true,
   },
-  coord: {
-    x: {
-      type: Number,
-      required: true,
-    },
-    y: {
-      type: Number,
-      required: true,
-    },
+  valence: {
+    type: Number,
+    required: true,
+  },
+  arousal: {
+    type: Number,
+    required: true,
+  },
+  dominance: {
+    type: Number,
+    required: true,
   },
 });
 

@@ -11,7 +11,11 @@ const Study2Schema = new Schema({
         type: Number,
         required: true,
     },
-    signal_id: {
+    signal1_id: {   
+        type: String,
+        required: true,
+    },
+    signal2_id: {
         type: String,
         required: true,
     },
@@ -19,10 +23,7 @@ const Study2Schema = new Schema({
         type: String,
         required: true,
     },
-    confidence: {
-        type: Number,
-        required: true,
-    },
 });
 
 module.exports = Study2 = mongoose.model('study2', Study2Schema);
+

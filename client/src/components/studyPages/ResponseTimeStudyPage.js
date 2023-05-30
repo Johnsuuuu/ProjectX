@@ -21,26 +21,26 @@ function ResponseTimeStudyPage() {
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const nextTrialNumber = parseInt(trialNumber) + 1;
     const signal_ids = {
-        1: '531#1',
-        2: '25152',
-        3: '34103',
-        4: '45011',
-        5: '54011',
-        6: '15140',
-        7: '25194',
-        8: '34163',
-        9: '45012',
-        10: '55012',
-        11: '53133',
-        12: '44113',
-        13: '35133',
-        14: '45013',
-        15: '54173',
-        16: '23104',
-        17: '25112',
-        18: '33182',
-        19: '45014',
-        20: '531#2',
+        1: '531#11',
+        2: '251521',
+        3: '341031',
+        4: '450111',
+        5: '540111',
+        6: '151401',
+        7: '251941',
+        8: '341631',
+        9: '450121',
+        10: '550121',
+        11: '531331',
+        12: '441131',
+        13: '351331',
+        14: '450131',
+        15: '541731',
+        16: '231041',
+        17: '251121',
+        18: '331821',
+        19: '450141',
+        20: '531#21',
     };
 
     const getButtonName = (signal_id) => {
@@ -56,12 +56,12 @@ function ResponseTimeStudyPage() {
         setPlayClicked(true);
         // Add code to play the signal
         const buttonName = getButtonName(signal_ids[trialNumber]);
-        const lastThreeDigits = signal_ids[trialNumber].substr(-3);
+        const lastFourDigits = signal_ids[trialNumber].substr(-4);
         const min = 2;
         const max = 4;
         const delay = Math.floor(Math.random() * (max - min + 1) + min) * 1000;
         setTimeout(() => {
-            axios.post('http://192.168.86.246:4090/' + buttonName, lastThreeDigits)
+            axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits)
                 .then(response => {
                     console.log(response.data);
                     let [ast, aet] = response.data.split("#");
