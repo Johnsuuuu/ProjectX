@@ -15,6 +15,7 @@ router.post('/submit', (req, res) => {
     valence: req.body.valence,
     arousal: req.body.arousal,
     dominance: req.body.dominance,
+    play_button_click_number: req.body.play_button_click_number,
   });
 
   newStudy1.save().then(study1 => res.json(study1));

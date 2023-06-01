@@ -11,7 +11,7 @@ const Study2Schema = new Schema({
         type: Number,
         required: true,
     },
-    signal1_id: {   
+    signal1_id: {
         type: String,
         required: true,
     },
@@ -21,6 +21,14 @@ const Study2Schema = new Schema({
     },
     choice: {
         type: String,
+        required: true,
+    },
+    play_button_1_click_number: {
+        type: Number,
+        required: true,
+    },
+    play_button_2_click_number: {
+        type: Number,
         required: true,
     },
 });

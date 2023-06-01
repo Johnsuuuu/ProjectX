@@ -18,6 +18,8 @@ function HapticsRealismStudyPage() {
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const nextTrialNumber = parseInt(trialNumber) + 1;
+    const [playButton1ClickNum, setPlayButton1ClickNum] = useState(0);
+    const [playButton2ClickNum, setPlayButton2ClickNum] = useState(0);
     // const signal_ids = {
     //     '1': '130331',
     //     '2': '530311',
@@ -172,9 +174,13 @@ function HapticsRealismStudyPage() {
             signal1_id: signal_ids[trialNumber]["signal1"],
             signal2_id: signal_ids[trialNumber]["signal2"],
             choice: choice,
+            play_button_1_click_number: playButton1ClickNum,
+            play_button_2_click_number: playButton2ClickNum,
         };
         setIfClicked(false);
         setRadioValue('');
+        setPlayButton1ClickNum(0);
+        setPlayButton2ClickNum(0);
         axios.post('/api/study2/submit', trialData)
             .then(response => {
                 console.log(response.data);
@@ -205,7 +211,8 @@ function HapticsRealismStudyPage() {
     const playOnClick1 = () => {
         const buttonName = getButtonName(signal_ids[trialNumber]['signal1']);
         const lastFourDigits = signal_ids[trialNumber]['signal1'].substr(-4);
-        axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits).then(response => {
+        setPlayButton1ClickNum(playButton1ClickNum + 1);
+        axios.post('http://192.168.86.24:4090/' + buttonName, lastFourDigits).then(response => {
             console.log(response.data);
         }).catch(err => {
             console.error(err);
@@ -215,7 +222,8 @@ function HapticsRealismStudyPage() {
     const playOnClick2 = () => {
         const buttonName = getButtonName(signal_ids[trialNumber]['signal2']);
         const lastFourDigits = signal_ids[trialNumber]['signal2'].substr(-4);
-        axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits).then(response => {
+        setPlayButton2ClickNum(playButton2ClickNum + 1);
+        axios.post('http://192.168.86.24:4090/' + buttonName, lastFourDigits).then(response => {
             console.log(response.data);
         }).catch(err => {
             console.error(err);

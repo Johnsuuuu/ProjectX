@@ -241,7 +241,7 @@ function AffectionComputingStudyPageBackUp() {
     const playOnClick = () => {
         const buttonName = getButtonName(signal_ids[trialNumber]);
         const lastFourDigits = signal_ids[trialNumber].substr(-4);
-        axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits).then(response => {
+        axios.post('http://192.168.86.24:4090/' + buttonName, lastFourDigits).then(response => {
             console.log(response.data);
         }).catch(err => {
             console.error(err);

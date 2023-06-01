@@ -61,7 +61,7 @@ function ResponseTimeStudyPage() {
         const max = 4;
         const delay = Math.floor(Math.random() * (max - min + 1) + min) * 1000;
         setTimeout(() => {
-            axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits)
+            axios.post('http://192.168.86.24:4090/' + buttonName, lastFourDigits)
                 .then(response => {
                     console.log(response.data);
                     let [ast, aet] = response.data.split("#");

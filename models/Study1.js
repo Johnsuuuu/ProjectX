@@ -27,6 +27,10 @@ const Study1Schema = new Schema({
     type: Number,
     required: true,
   },
+  play_button_click_number: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = Study1 = mongoose.model('study1', Study1Schema);

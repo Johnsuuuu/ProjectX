@@ -14,6 +14,8 @@ router.post('/submit', (req, res) => {
     signal1_id: req.body.signal1_id,
     signal2_id: req.body.signal2_id,
     choice: req.body.choice,
+    play_button_1_click_number: req.body.play_button_1_click_number,
+    play_button_2_click_number: req.body.play_button_2_click_number,
   });
 
   newStudy3.save().then(study3 => res.json(study3));

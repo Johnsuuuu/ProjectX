@@ -23,6 +23,14 @@ const Study3Schema = new Schema({
         type: String,
         required: true,
     },
+    play_button_1_click_number: {
+        type: Number,
+        required: true,
+    },
+    play_button_2_click_number: {
+        type: Number,
+        required: true,
+    },
 });
 
 module.exports = Study3 = mongoose.model('study3', Study3Schema);

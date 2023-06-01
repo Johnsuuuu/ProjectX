@@ -36,6 +36,7 @@ function AffectionComputingStudyPage() {
     const [ifClickedValence, setIfClickedValence] = useState(false);
     const [ifClickedArousal, setIfClickedArousal] = useState(false);
     const [ifClickedDominance, setIfClickedDominance] = useState(false);
+    const [playButtonClickNum, setPlayButtonClickNum] = useState(0);
 
     const signal_ids = {
         1: '131131',
@@ -109,7 +110,8 @@ function AffectionComputingStudyPage() {
     const playOnClick = () => {
         const buttonName = getButtonName(signal_ids[trialNumber]);
         const lastFourDigits = signal_ids[trialNumber].substr(-4);
-        axios.post('http://192.168.86.250:4090/' + buttonName, lastFourDigits).then(response => {
+        setPlayButtonClickNum(playButtonClickNum + 1);
+        axios.post('http://192.168.86.24:4090/' + buttonName, lastFourDigits).then(response => {
             console.log(response.data);
         }).catch(err => {
             console.error(err);
@@ -124,6 +126,7 @@ function AffectionComputingStudyPage() {
             valence: parseInt(valence),
             arousal: parseInt(arousal),
             dominance: parseInt(dominance),
+            play_button_click_number: playButtonClickNum,
         };
         setValence('');
         setArousal('');
@@ -131,6 +134,7 @@ function AffectionComputingStudyPage() {
         setIfClickedValence(false);
         setIfClickedArousal(false);
         setIfClickedDominance(false);
+        setPlayButtonClickNum(0);
         axios.post('/api/study1/submit', trialData)
             .then(response => {
                 console.log(response.data);
