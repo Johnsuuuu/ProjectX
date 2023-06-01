@@ -19,7 +19,7 @@ function AffectionComputingPage() {
             <h1 style={{ textAlign: 'center', marginTop: '80px' }}>Affection Computing Study Details</h1>
             <div style={{ width: "50%", margin: '0 auto' }}>
                 <p>
-                    In this experiment, we would like you to rate the emotion you believe the touch conveys, using a 2-dimensional scale of valence and arousal. This exercise requires you to imagine the individual administering the touch and infer their emotional state based solely on the touch signal you received. For the valence dimension, a lower score signifies negative or unpleasant emotions such as sadness or anger, while a higher score signifies positive or pleasant emotions such as happiness or excitement. For the arousal dimension, a lower score indicates calm or passive emotions, while a higher score suggests active or intense emotions like surprise or fear. Reflect on the gesture: did it feel like it was given with joy, anger, calmness, or excitement? There are no right or wrong answers; your unique interpretation is what matters.
+                In this engaging study, you will be exposed to a sensory interplay of touch and light. As you experience these stimuli, we invite you to imagine an emotional outreach from another individual. The essence of this study is <b>not your emotional response to the gesture, but rather the emotion you perceive to be conveyed to you</b>. Your understanding of these transmitted emotions will be recorded using a Self-Assessment Manikin (SAM). SAM is a easy-to-use, non-verbal pictorial tool that directly quantifies pleasure, arousal, and dominance.
                 </p>
             </div>
             <div style={{ textAlign: 'center' }}>
