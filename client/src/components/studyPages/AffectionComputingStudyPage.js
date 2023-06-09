@@ -39,42 +39,33 @@ function AffectionComputingStudyPage() {
     const [playButtonClickNum, setPlayButtonClickNum] = useState(0);
 
     const signal_ids = {
-        1: '131131',
-        2: '330131',
-        3: '530131',
-        4: '530331',
-        5: '331911',
-        6: '530111',
-        7: '131111',
-        8: '330931',
-        9: '530911',
-        10: '531911',
-        11: '331311',
-        12: '130911',
-        13: '531111',
-        14: '330311',
-        15: '531931',
-        16: '531331',
-        17: '330111',
-        18: '130931',
-        19: '531131',
-        20: '131911',
-        21: '331111',
-        22: '330331',
-        23: '331331',
-        24: '331131',
-        25: '531311',
-        26: '331931',
-        27: '530311',
-        28: '530931',
-        29: '130331',
-        30: '131331',
-        31: '131311',
-        32: '130131',
-        33: '131931',
-        34: '330911',
-        35: '130111',
-        36: '130311',
+        1: '121011',
+        2: '331031',
+        3: '531311',
+        4: '330011',
+        5: '121231',
+        6: '531931',
+        7: '121311',
+        8: '331311',
+        9: '331911',
+        10: '530011',
+        11: '121911',
+        12: '120011',
+        13: '531211',
+        14: '531231',
+        15: '331211',
+        16: '121931',
+        17: '331011',
+        18: '531911',
+        19: '331931',
+        20: '121211',
+        21: '531031',
+        22: '331231',
+        23: '121331',
+        24: '121031',
+        25: '531011',
+        26: '331331',
+        27: '531331',
     };
 
     const handleValenceChange = (event) => {
@@ -139,7 +130,7 @@ function AffectionComputingStudyPage() {
             .then(response => {
                 console.log(response.data);
 
-                if (nextTrialNumber > 36) {
+                if (nextTrialNumber > 27) {
                     setSnackbarMessage('Study1 completed!');
                     setSnackbarSeverity('success');
                     setSnackbarOpen(true);
@@ -165,7 +156,7 @@ function AffectionComputingStudyPage() {
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', marginTop: '80px' }}>Affection Computing Study Trial {trialNumber}/36</h1>
+            <h1 style={{ textAlign: 'center', marginTop: '80px' }}>Affection Computing Study Trial {trialNumber}/27</h1>
             <div style={{
                 width: '700px',
                 height: '550px',

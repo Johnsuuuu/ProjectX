@@ -170,8 +170,8 @@ function HapticsIntensityStudyPage() {
     // };
     const signal_ids = {
         1: {
-            "signal1": '131130',
-            "signal2": '131330'
+            "signal1": '121130',
+            "signal2": '121330'
         },
         2: {
             "signal1": '331130',
@@ -182,8 +182,8 @@ function HapticsIntensityStudyPage() {
             "signal2": '530131'
         },
         4: {
-            "signal1": '131330',
-            "signal2": '131331'
+            "signal1": '121330',
+            "signal2": '121331'
         },
         5: {
             "signal1": '531130',
@@ -194,8 +194,8 @@ function HapticsIntensityStudyPage() {
             "signal2": '331331'
         },
         7: {
-            "signal1": '130131',
-            "signal2": '130131'
+            "signal1": '120131',
+            "signal2": '120131'
         },
         8: {
             "signal1": '331130',
@@ -214,8 +214,8 @@ function HapticsIntensityStudyPage() {
             "signal2": '530131'
         },
         12: {
-            "signal1": '131131',
-            "signal2": '130131'
+            "signal1": '121131',
+            "signal2": '120131'
         },
         13: {
             "signal1": '531330',
@@ -226,12 +226,12 @@ function HapticsIntensityStudyPage() {
             "signal2": '331330'
         },
         15: {
-            "signal1": '131330',
-            "signal2": '130130'
+            "signal1": '121330',
+            "signal2": '120130'
         },
         16: {
-            "signal1": '131130',
-            "signal2": '130130'
+            "signal1": '121130',
+            "signal2": '120130'
         },
         17: {
             "signal1": '330130',
@@ -250,16 +250,16 @@ function HapticsIntensityStudyPage() {
             "signal2": '531331'
         },
         21: {
-            "signal1": '130130',
-            "signal2": '130130'
+            "signal1": '120130',
+            "signal2": '120130'
         },
         22: {
-            "signal1": '131331',
-            "signal2": '130131'
+            "signal1": '121331',
+            "signal2": '120131'
         },
         23: {
-            "signal1": '130130',
-            "signal2": '130131'
+            "signal1": '120130',
+            "signal2": '120131'
         },
         24: {
             "signal1": '331330',
@@ -278,8 +278,8 @@ function HapticsIntensityStudyPage() {
             "signal2": '530130'
         },
         28: {
-            "signal1": '131131',
-            "signal2": '131331'
+            "signal1": '121131',
+            "signal2": '121331'
         },
         29: {
             "signal1": '330130',
@@ -298,8 +298,8 @@ function HapticsIntensityStudyPage() {
             "signal2": '531131'
         },
         33: {
-            "signal1": '131130',
-            "signal2": '131131',
+            "signal1": '121130',
+            "signal2": '121131',
         },
     };
 

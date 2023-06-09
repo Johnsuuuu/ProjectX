@@ -57,12 +57,12 @@ function HapticsRealismStudyPage() {
 
     const signal_ids = {
         1: {
-            "signal1": '131301',
-            "signal2": '131311'
+            "signal1": '121301',
+            "signal2": '121311'
         },
         2: {
-            "signal1": '131331',
-            "signal2": '130301'
+            "signal1": '121331',
+            "signal2": '120301'
         },
         3: {
             "signal1": '231301',
@@ -77,8 +77,8 @@ function HapticsRealismStudyPage() {
             "signal2": '531331'
         },
         6: {
-            "signal1": '131301',
-            "signal2": '131331'
+            "signal1": '121301',
+            "signal2": '121331'
         },
         7: {
             "signal1": '331311',
@@ -93,8 +93,8 @@ function HapticsRealismStudyPage() {
             "signal2": '531311'
         },
         10: {
-            "signal1": '131311',
-            "signal2": '131331'
+            "signal1": '121311',
+            "signal2": '121331'
         },
         11: {
             "signal1": '331301',
@@ -117,8 +117,8 @@ function HapticsRealismStudyPage() {
             "signal2": '530301'
         },
         16: {
-            "signal1": '131311',
-            "signal2": '130301'
+            "signal1": '121311',
+            "signal2": '120301'
         },
         17: {
             "signal1": '231331',
@@ -137,8 +137,8 @@ function HapticsRealismStudyPage() {
             "signal2": '330301'
         },
         21: {
-            "signal1": '131301',
-            "signal2": '130301'
+            "signal1": '121301',
+            "signal2": '120301'
         },
         22: {
             "signal1": '531311',
